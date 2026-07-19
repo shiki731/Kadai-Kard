@@ -15,6 +15,10 @@ public class KardInfoGet : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 1.0f);
+            if(hit.collider.tag == "Card")
+            {
+                Debug.Log("aaa");
+            }
         }
     }
 }
